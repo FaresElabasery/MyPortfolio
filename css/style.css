@@ -18,7 +18,7 @@
     padding: 0;
 }
 body{
-    /* height:10000vh; */
+    height:10000vh;
 }
 
 /* header */
@@ -189,4 +189,23 @@ section#hero {
         margin-left: 6px;
     }
 
+}
+
+/* About me */
+section#about {
+    background-image: url('../images/about-mb-bg.svg');
+    background-size: cover;
+    color: var(--primary-color);
+    background-color: #1D1D1D;
+}
+@media screen and (min-width: 768px) {
+    section#about {
+        background-image: url('../images/about-bg.svg');
+        background-size: cover;
+        color: var(--primary-color);
+        background-color: #1D1D1D;
+    }
+}
+.text-justify{
+    text-align: justify;
 }
