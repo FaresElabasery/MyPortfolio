@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es5",                   // تحويل الكود ليعمل على متصفحات قديمة
+    "module": "commonjs",              // استخدام النظام CommonJS للوحدات
+    "outDir": "./js",                  // تحديد المجلد الذي ستُحفظ فيه ملفات JavaScript
+    "rootDir": "./ts",                 // تحديد مجلد ملفات TypeScript المصدرية
+    "strict": true,                    // تفعيل الفحص الصارم للأنواع
+    "esModuleInterop": true,           // دعم التوافق مع الوحدات ES6
+    "skipLibCheck": true               // تخطي فحص أنواع المكتبات
+  },
+  "include": ["ts/**/*"],              // تحديد الملفات التي سيتم ترجمتها
+  "exclude": ["node_modules"]          // استثناء مجلد node_modules من الترجمة
+}

@@ -1,3 +1,4 @@
+"use strict";
 // Add event listener to scroll event
 window.addEventListener('scroll', function () {
     // Get the about section element

@@ -10,21 +10,49 @@
     --bg-color-icons: rgb(196, 196, 196);
     --gray-dark-color: rgb(29, 29, 29);
     --bg-color: rgb(215, 215, 215);
+    --sb-track-color: #ffffff;
+    --sb-thumb-color: #000000;
+    --sb-size: 11px;
 }
 
 * {
     font-family: "Raleway", serif;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
-body{
-    height:10000vh;
+
+body {
+    height: 1000vh;
+    background-color: var(--bg-color);
+}
+
+body::-webkit-scrollbar {
+    width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 4px;
+    border: 2px solid #000000;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+    body {
+        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
 }
 
 /* header */
 header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
 }
+
 .navbar {
     --bs-navbar-padding-x: 0;
     --bs-navbar-padding-y: 0.5rem;
@@ -115,6 +143,7 @@ section#hero {
     background-position-y: -4rem;
     height: calc(100vh - 58.5px);
 }
+
 @media screen and (min-width: 768px) {
     section#hero {
         background-image: url('../images/hero.svg');
@@ -160,6 +189,7 @@ section#hero {
     font-size: 20px;
     font-weight: normal;
 }
+
 @media screen and (min-width: 768px) {
     .profile-section {
         color: var(--secondary-color);
@@ -169,6 +199,7 @@ section#hero {
         clip-path: none !important;
         background-color: transparent;
     }
+
     .profile-content h1 {
         margin: 1rem 0 0;
         font-size: 4rem;
@@ -176,15 +207,18 @@ section#hero {
         text-wrap: nowrap;
         margin-left: -3px;
     }
+
     .profile-content h2 {
         font-size: 1.5rem;
         font-weight: bold;
         color: var(--font-color-hero);
     }
+
     .profile-content p {
         margin: 8rem 0 0;
         font-size: 2rem;
     }
+
     .icons {
         margin-left: 6px;
     }
@@ -198,6 +232,7 @@ section#about {
     color: var(--primary-color);
     background-color: #1D1D1D;
 }
+
 @media screen and (min-width: 768px) {
     section#about {
         background-image: url('../images/about-bg.svg');
@@ -206,6 +241,7 @@ section#about {
         background-color: #1D1D1D;
     }
 }
-.text-justify{
+
+.text-justify {
     text-align: justify;
 }
