@@ -18,7 +18,7 @@
     padding: 0;
 }
 body{
-    height:10000vh;
+    /* height:10000vh; */
 }
 
 /* header */
@@ -113,7 +113,18 @@ section#hero {
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: -4rem;
-    height: calc(100vh - 75px);
+    height: calc(100vh - 58.5px);
+}
+@media screen and (min-width: 768px) {
+    section#hero {
+        background-image: url('../images/hero.svg');
+        background-color: var(--secondary-color);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: -8rem;
+        height: calc(100vh - 75px);
+        position: relative;
+    }
 }
 
 .profile-section {
@@ -125,8 +136,8 @@ section#hero {
     color: white;
     padding: 20px;
     clip-path: polygon(0 50%, 100% 30%, 100% 100%, 0% 100%);
-
 }
+
 
 .profile-content {
     max-width: 96%;
@@ -148,4 +159,34 @@ section#hero {
     margin: 5px 0;
     font-size: 20px;
     font-weight: normal;
+}
+@media screen and (min-width: 768px) {
+    .profile-section {
+        color: var(--secondary-color);
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        clip-path: none !important;
+        background-color: transparent;
+    }
+    .profile-content h1 {
+        margin: 1rem 0 0;
+        font-size: 4rem;
+        font-weight: bolder;
+        text-wrap: nowrap;
+        margin-left: -3px;
+    }
+    .profile-content h2 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--font-color-hero);
+    }
+    .profile-content p {
+        margin: 8rem 0 0;
+        font-size: 2rem;
+    }
+    .icons {
+        margin-left: 6px;
+    }
+
 }
