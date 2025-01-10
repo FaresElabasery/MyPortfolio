@@ -30,6 +30,8 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    width: 300px;
+    text-align: center;
     font-weight: bold;
     letter-spacing: 0.3rem;
     padding: 1.5rem 4rem;
@@ -37,6 +39,12 @@
     color: var(--secondary-color);
     border: 8px solid var(--secondary-color);
     text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+    .section-title {
+        width: 360px;
+    }
+    
 }
 
 .letter-spacing {
@@ -299,3 +307,8 @@ section#services .card:last-child img {
 section#services .card:hover img {
     transform: scale(1.18);
 }
+/* skills */
+.carousel-item img {
+    height: 300px;
+}
+
