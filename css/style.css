@@ -40,11 +40,12 @@
     border: 8px solid var(--secondary-color);
     text-transform: uppercase;
 }
+
 @media screen and (min-width: 768px) {
     .section-title {
         width: 360px;
     }
-    
+
 }
 
 .letter-spacing {
@@ -81,6 +82,17 @@ body::-webkit-scrollbar-thumb {
 /* header */
 header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+    animation: header-animation 2s infinite alternate;
+}
+
+@keyframes header-animation {
+    from {
+        opacity: 0.9;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .navbar {
@@ -152,7 +164,7 @@ header {
     --bs-btn-border-color: var(--primary-color-1);
     --bs-btn-hover-color: var(--primary-color);
     --bs-btn-hover-bg: var(--secondary-color);
-    --bs-btn-hover-border-color: var(--secondary-color);
+    --bs-btn-hover-border-color: var(--primary-color);
     --bs-btn-focus-shadow-rgb: 130, 138, 145;
     --bs-btn-active-color: #fff;
     --bs-btn-active-bg: var(--primary-color-2);
@@ -163,6 +175,19 @@ header {
     --bs-btn-disabled-border-color: var(--primary-color-1);
 }
 
+@keyframes contact-btn {
+    from {
+        transform: scale(1);
+    }
+    
+    to {
+        transform: scale(1.03);
+    }
+}
+
+.contact-btn {
+    animation: contact-btn 2s infinite alternate;
+}
 /* hero section */
 section#hero {
     /* background-image: url('../images/hero.svg'); */
@@ -253,6 +278,10 @@ section#hero {
         margin-left: 6px;
     }
 
+    .icons a:hover img {
+        transform: scale(1.2);
+    }
+
 }
 
 /* About me */
@@ -297,6 +326,7 @@ section#services .card:last-child img {
         left: -12px;
         width: 60px;
     }
+
     section#services .card:last-child img {
         top: 19px;
         left: 0px;
@@ -307,8 +337,8 @@ section#services .card:last-child img {
 section#services .card:hover img {
     transform: scale(1.18);
 }
+
 /* skills */
 .carousel-item img {
     height: 300px;
 }
-

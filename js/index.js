@@ -5,6 +5,7 @@ window.addEventListener('scroll', function () {
     var aboutSection = document.querySelector('#about');
     var aboutTitle = document.querySelector('#about h2');
     var servicesSection = document.querySelector('#services');
+    var headerSection = document.querySelector('#header');
     var servicesTitle = document.querySelectorAll('#services p');
     // Check if the about section is in the viewport
     if (aboutSection.getBoundingClientRect().top <= window.innerHeight / 2) {
@@ -13,6 +14,7 @@ window.addEventListener('scroll', function () {
     }
     if (servicesSection.getBoundingClientRect().top <= window.innerHeight / 2) {
         // Add the animate__bounceInLeft class to each p in the services section
+        headerSection.classList.add('sticky-top');
         servicesTitle.forEach(function (title) {
             title.classList.add('animate__pulse');
         });
