@@ -179,7 +179,7 @@ header {
     from {
         transform: scale(1);
     }
-    
+
     to {
         transform: scale(1.03);
     }
@@ -188,6 +188,7 @@ header {
 .contact-btn {
     animation: contact-btn 2s infinite alternate;
 }
+
 /* hero section */
 section#hero {
     /* background-image: url('../images/hero.svg'); */
@@ -279,7 +280,8 @@ section#hero {
     }
 
     .icons a:hover img {
-        transform: scale(1.2);
+        animation: flip;
+        animation-duration: 1s;
     }
 
 }
@@ -334,8 +336,10 @@ section#services .card:last-child img {
 
 }
 
+/* apply animate__flip when hover in card */
 section#services .card:hover img {
-    transform: scale(1.18);
+    animation: flip;
+    animation-duration: 1s;
 }
 
 /* skills */
